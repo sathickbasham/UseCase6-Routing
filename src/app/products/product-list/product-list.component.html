@@ -1,0 +1,10 @@
+<ul class="crises">
+    <li *ngFor="let product of productList"
+      [class.selected]="product.id === selectedid">
+      <a [routerLink]="[product.id]">
+        <span class="badge">{{ product.id }}</span>{{ product.name }}
+      </a>
+    </li>
+  </ul>
+  
+  <router-outlet></router-outlet>
